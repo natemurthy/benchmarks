@@ -1,0 +1,54 @@
+nate@ubuntu:~$ ab -n 1000 -c 100 http://54.69.100.107:5000/api/rest/status
+This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 54.69.100.107 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+Server Software:        
+Server Hostname:        54.69.100.107
+Server Port:            5000
+
+Document Path:          /api/rest/status
+Document Length:        43 bytes
+
+Concurrency Level:      100
+Time taken for tests:   9.525 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      170000 bytes
+HTML transferred:       43000 bytes
+Requests per second:    104.98 [#/sec] (mean)
+Time per request:       952.521 [ms] (mean)
+Time per request:       9.525 [ms] (mean, across all concurrent requests)
+Transfer rate:          17.43 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       34  202 772.1     93    7083
+Processing:    33  133  60.8    121     403
+Waiting:       33  129  59.2    115     402
+Total:        103  335 762.2    237    7136
+
+Percentage of the requests served within a certain time (ms)
+  50%    237
+  66%    263
+  75%    284
+  80%    292
+  90%    321
+  95%    358
+  98%    503
+  99%   7085
+ 100%   7136 (longest request)
+
