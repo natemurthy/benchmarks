@@ -4,8 +4,7 @@ app = Flask(__name__)
 
 @app.route("/api/rest/status",  methods=['GET'])
 def get_status():
-    response = dict()
-    response['DgmsInstanceId'] = 'dgms-service-0000'
+    response = {'DgmsInstanceId': 'dgms-service-0000'}
     return jsonify(response)
 
 
