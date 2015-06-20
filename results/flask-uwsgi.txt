@@ -1,4 +1,4 @@
-nate@ubuntu:~$ ab -n 1000 -c 100 http://54.69.100.107:5000/api/rest/status
+nate@ubuntu:~/Workspace/misc$ ab -c 100 -n 1000 http://54.69.100.107:5000/api/rest/status
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -16,6 +16,7 @@ Completed 900 requests
 Completed 1000 requests
 Finished 1000 requests
 
+
 Server Software:        
 Server Hostname:        54.69.100.107
 Server Port:            5000
@@ -24,31 +25,30 @@ Document Path:          /api/rest/status
 Document Length:        43 bytes
 
 Concurrency Level:      100
-Time taken for tests:   2.590 seconds
+Time taken for tests:   10.732 seconds
 Complete requests:      1000
 Failed requests:        0
 Total transferred:      114000 bytes
 HTML transferred:       43000 bytes
-Requests per second:    386.16 [#/sec] (mean)
-Time per request:       258.960 [ms] (mean)
-Time per request:       2.590 [ms] (mean, across all concurrent requests)
-Transfer rate:          42.99 [Kbytes/sec] received
+Requests per second:    93.18 [#/sec] (mean)
+Time per request:       1073.228 [ms] (mean)
+Time per request:       10.732 [ms] (mean, across all concurrent requests)
+Transfer rate:          10.37 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:       29  104  49.8    100     307
-Processing:    37  124  49.4    118     333
-Waiting:       35  119  47.8    107     329
-Total:        106  228  68.2    221     511
+Connect:       92  477 125.4    479     769
+Processing:   206  518 185.1    507    3843
+Waiting:      205  510 119.2    506    1296
+Total:        469  994 194.2    990    4093
 
 Percentage of the requests served within a certain time (ms)
-  50%    221
-  66%    250
-  75%    271
-  80%    290
-  90%    319
-  95%    346
-  98%    390
-  99%    424
- 100%    511 (longest request)
-
+  50%    990
+  66%   1027
+  75%   1063
+  80%   1126
+  90%   1179
+  95%   1226
+  98%   1280
+  99%   1304
+ 100%   4093 (longest request)
