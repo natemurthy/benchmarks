@@ -1,2 +1,2 @@
 export PATH=$PATH:/usr/local/go/bin
-go run hello-server.go
+go run app.go
