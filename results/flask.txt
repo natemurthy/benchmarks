@@ -1,9 +1,9 @@
-nate@ubuntu:~$ ab -c 100 -n 1000 http://54.69.100.107:5000/api/rest/status
-This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+nathan-macbook:~ nate$ ab -c 100 -n 1000 http://192.168.1.10:5000/api/rest/status
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
-Benchmarking 54.69.100.107 (be patient)
+Benchmarking 192.168.1.10 (be patient)
 Completed 100 requests
 Completed 200 requests
 Completed 300 requests
@@ -17,38 +17,39 @@ Completed 1000 requests
 Finished 1000 requests
 
 
-Server Software:        Werkzeug/0.9.4
-Server Hostname:        54.69.100.107
+Server Software:        Werkzeug/0.10.4
+Server Hostname:        192.168.1.10
 Server Port:            5000
 
 Document Path:          /api/rest/status
 Document Length:        43 bytes
 
 Concurrency Level:      100
-Time taken for tests:   9.823 seconds
+Time taken for tests:   9.930 seconds
 Complete requests:      1000
 Failed requests:        0
-Total transferred:      188000 bytes
+Write errors:           0
+Total transferred:      189017 bytes
 HTML transferred:       43000 bytes
-Requests per second:    101.81 [#/sec] (mean)
-Time per request:       982.252 [ms] (mean)
-Time per request:       9.823 [ms] (mean, across all concurrent requests)
-Transfer rate:          18.69 [Kbytes/sec] received
+Requests per second:    100.71 [#/sec] (mean)
+Time per request:       992.976 [ms] (mean)
+Time per request:       9.930 [ms] (mean, across all concurrent requests)
+Transfer rate:          18.59 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:       68  400 171.9    401    1559
-Processing:   163  489 160.4    476    2298
-Waiting:      163  485 144.1    475     853
-Total:        231  889 243.5    942    2740
+Connect:        6  434 140.2    427     813
+Processing:   266  480 182.7    460    4976
+Waiting:      265  478 182.6    456    4976
+Total:        308  914 239.8    864    5518
 
 Percentage of the requests served within a certain time (ms)
-  50%    942
-  66%   1009
-  75%   1046
-  80%   1066
-  90%   1141
-  95%   1204
-  98%   1296
-  99%   1299
- 100%   2740 (longest request)
+  50%    864
+  66%   1002
+  75%   1053
+  80%   1117
+  90%   1182
+  95%   1211
+  98%   1223
+  99%   1233
+ 100%   5518 (longest request)

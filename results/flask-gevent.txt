@@ -1,9 +1,9 @@
-nate@ubuntu:~$ ab -c 100 -n 1000 http://54.69.100.107:5000/api/rest/status
-This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+nathan-macbook:~ nate$ ab -c 100 -n 1000 http://192.168.1.10:5000/api/rest/status
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
-Benchmarking 54.69.100.107 (be patient)
+Benchmarking 192.168.1.10 (be patient)
 Completed 100 requests
 Completed 200 requests
 Completed 300 requests
@@ -18,37 +18,38 @@ Finished 1000 requests
 
 
 Server Software:        
-Server Hostname:        54.69.100.107
+Server Hostname:        192.168.1.10
 Server Port:            5000
 
 Document Path:          /api/rest/status
 Document Length:        43 bytes
 
 Concurrency Level:      100
-Time taken for tests:   10.789 seconds
+Time taken for tests:   15.789 seconds
 Complete requests:      1000
 Failed requests:        0
+Write errors:           0
 Total transferred:      170000 bytes
 HTML transferred:       43000 bytes
-Requests per second:    92.69 [#/sec] (mean)
-Time per request:       1078.922 [ms] (mean)
-Time per request:       10.789 [ms] (mean, across all concurrent requests)
-Transfer rate:          15.39 [Kbytes/sec] received
+Requests per second:    63.34 [#/sec] (mean)
+Time per request:       1578.853 [ms] (mean)
+Time per request:       15.789 [ms] (mean, across all concurrent requests)
+Transfer rate:          10.51 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:       70  408 146.3    431    1494
-Processing:   156  399 144.1    409    3299
-Waiting:      156  396 111.0    408     656
-Total:        284  807 230.8    869    3773
+Connect:        8  700 352.9    579    2380
+Processing:   301  826 489.7    859    5512
+Waiting:      301  823 489.3    855    5511
+Total:        507 1526 654.4   1438    6015
 
 Percentage of the requests served within a certain time (ms)
-  50%    869
-  66%    922
-  75%    949
-  80%    966
-  90%   1001
-  95%   1021
-  98%   1100
-  99%   1126
- 100%   3773 (longest request)
+  50%   1438
+  66%   1841
+  75%   1925
+  80%   2027
+  90%   2262
+  95%   2325
+  98%   3300
+  99%   3765
+ 100%   6015 (longest request)
